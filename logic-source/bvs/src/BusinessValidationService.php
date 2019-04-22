@@ -2,7 +2,6 @@
 
 namespace LogicSource\BVS;
 
-
 use Illuminate\Support\Collection;
 
 class BusinessValidationService
@@ -21,12 +20,12 @@ class BusinessValidationService
              * @param BusinessRule $rule
              */
                 function (BusinessRule $rule) use ($messages) {
-                if ($rule->when) {
-                    if (!$rule->passes()) {
-                        $messages->push($rule->message());
+                    if ($rule->when) {
+                        if (!$rule->passes()) {
+                            $messages->push($rule->message());
+                        }
                     }
-                }
-            });
+                });
         });
 
         if (!$messages->isEmpty()) {
