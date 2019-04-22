@@ -5,21 +5,21 @@ namespace LogicSource\BVS;
 abstract class BusinessRule
 {
 
-    protected $when = true;
+    public $when = true;
 
     /**
      * Determine if the validation rule passes.
      *
      * @return bool
      */
-    abstract protected function passes();
+    abstract public function passes();
 
     /**
      * Get the validation error message.
      *
      * @return string
      */
-    abstract protected function message();
+    abstract public function message();
 
     /**
      * @param $condition

@@ -3,7 +3,6 @@
 namespace LogicSource\BVS;
 
 
-use BusinessRule, BusinessRuleValidationException;
 use Illuminate\Support\Collection;
 
 class BusinessValidationService
@@ -18,7 +17,10 @@ class BusinessValidationService
     public function validate(array $rules)
     {
         $messages = tap(collect(), function (Collection $messages) use ($rules) {
-            collect($rules)->each(function (BusinessRule $rule) use ($messages) {
+            collect($rules)->each(/**
+             * @param BusinessRule $rule
+             */
+                function (BusinessRule $rule) use ($messages) {
                 if ($rule->when) {
                     if (!$rule->passes()) {
                         $messages->push($rule->message());
