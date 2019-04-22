@@ -1,11 +1,12 @@
 {
     "name": "logic-source/bvs",
+    "version":"1.0.0",
     "license": "MIT",
     "minimum-stability": "dev",
     "require": {},
     "autoload": {
         "psr-4": {
-            "LogicSource\\BVS\\": "src/"
+            "LogicSource\\BVS\\": "/logic-source/bvs/src/"
         }
     },
     "extra": {
