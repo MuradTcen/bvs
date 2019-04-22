@@ -8,5 +8,12 @@
         "psr-4": {
             "LogicSource\\BVS\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LogicSource\\BVS\\BVSServiceProvider"
+            ]
+        }
     }
 }
