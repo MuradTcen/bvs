@@ -25,7 +25,7 @@ abstract class BusinessRule
      * @param $condition
      * @return mixed
      */
-    protected function when($condition)
+    public function when($condition)
     {
         $this->when = $condition;
         return $this;
