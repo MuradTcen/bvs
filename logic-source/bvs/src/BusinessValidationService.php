@@ -4,7 +4,7 @@ namespace LogicSource\BVS;
 
 
 use App\Exceptions\BusinessRuleValidationException;
-use App\Rules\Business\BusinessRule;
+use BusinessRule;
 use Illuminate\Support\Collection;
 
 class BusinessValidationService
