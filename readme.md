@@ -13,10 +13,10 @@
                 $this->bVS = $bVS;
             }
             ..
-            ..
-            $this->bVS->validate([
-                (new businessRule($value)->when($condition),
-            ]);
+                ..
+                $this->bVS->validate([
+                    (new businessRule($value)->when($condition),
+                ]);
             ..
         }
         
