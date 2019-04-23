@@ -12,12 +12,12 @@
             {
                 $this->bVS = $bVS;
             }
-        ..
-        ..
-        $this->bVS->validate([
-            (new businessRule($value)->when($condition),
-        ]);
-        ..
+            ..
+            ..
+            $this->bVS->validate([
+                (new businessRule($value)->when($condition),
+            ]);
+            ..
         }
         
 При невызове функции when($condition), происходит гарантированная проверка businessRule'а. Т.е. в следующем примере, 
