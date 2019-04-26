@@ -16,7 +16,7 @@ class BusinessValidationService
         $messages = [];
 
         foreach ($rules as $rule) {
-            if ($rule->when) {
+            if ($rule->isCondition()) {
                 if (!$rule->passes()) {
                     $messages [] = $rule->message();
                 }

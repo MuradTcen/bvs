@@ -4,8 +4,15 @@ namespace LogicSource\BVS;
 
 abstract class BusinessRule
 {
+    private $condition = true;
 
-    public $when = true;
+    /**
+     * @return bool
+     */
+    public function isCondition()
+    {
+        return $this->condition;
+    }
 
     /**
      * Determine if the validation rule passes.
@@ -27,7 +34,8 @@ abstract class BusinessRule
      */
     public function when($condition)
     {
-        $this->when = $condition;
+        $this->condition = $condition;
+
         return $this;
     }
 }
